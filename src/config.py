@@ -50,10 +50,23 @@ TOP_K = _int("TOP_K", 5)
 MIN_SIMILARITY = _float("MIN_SIMILARITY", 0.30)
 
 # ---- LLM (any OpenAI-compatible API) --------------------------------------
-LLM_API_KEY = os.getenv("LLM_API_KEY") or os.getenv("OPENAI_API_KEY", "")
-LLM_BASE_URL = os.getenv("LLM_BASE_URL") or None   # None -> official OpenAI endpoint
-LLM_MODEL = os.getenv("LLM_MODEL", "")             # no default on purpose: model ids change, set it in .env
-LLM_MAX_TOKENS = _int("LLM_MAX_TOKENS", 1024)      # generous: some models spend tokens on hidden reasoning
+
+def _setting(name, default=""):
+    value = os.getenv(name)
+    if value:
+        return value
+    try:
+        import streamlit as st
+        value = st.secrets.get(name, default)
+    except Exception:
+        value = default
+    return str(value) if value is not None else default
+
+
+LLM_API_KEY = _setting("LLM_API_KEY") or _setting("OPENAI_API_KEY")
+LLM_BASE_URL = _setting("LLM_BASE_URL") or None
+LLM_MODEL = _setting("LLM_MODEL")
+LLM_MAX_TOKENS = _int("LLM_MAX_TOKENS", 1024)
 
 # ---- conversation --------------------------------------------------------
-HISTORY_TURNS = _int("HISTORY_TURNS", 3)           # past question/answer pairs sent to the LLM
+HISTORY_TURNS = _int("HISTORY_TURNS", 3)
