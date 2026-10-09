@@ -1,0 +1,9 @@
+# Python 3.10 or newer
+pypdf>=4.0                    # PDF text extraction
+sentence-transformers>=3.0    # embedding model (installs PyTorch, first install is large)
+faiss-cpu>=1.8                # vector index
+numpy>=1.26
+openai>=1.50                  # client for any OpenAI-compatible LLM API
+streamlit>=1.40               # chat UI
+python-dotenv>=1.0            # loads .env
+pytest>=8.0                   # tests (optional)

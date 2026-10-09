@@ -1,0 +1,29 @@
+# secrets
+
+.env
+.env.*
+!.env.example
+
+# python
+
+**pycache**/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# generated files
+
+index/*
+!index/.gitkeep
+logs/*
+!logs/.gitkeep
+eval/results*.csv
+eval/results*.json
+
+# os / editor
+
+.DS_Store
+.idea/
+.vscode/
+

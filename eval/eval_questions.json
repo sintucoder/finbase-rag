@@ -1,0 +1,696 @@
+[
+ {
+  "id": "Q01",
+  "category": "direct_factual",
+  "question": "What is the minimum amount I need to start a mutual fund SIP on FinBase?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_1.pdf"
+    ],
+    "evidence": [
+     "₹100 per month"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "100"
+   ]
+  ]
+ },
+ {
+  "id": "Q02",
+  "category": "direct_factual",
+  "question": "What are the operating hours of Video KYC agents?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_6.pdf"
+    ],
+    "evidence": [
+     "9:00 AM to 8:00 PM"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "9:00 am",
+    "9 am",
+    "9am"
+   ],
+   [
+    "8:00 pm",
+    "8 pm",
+    "8pm"
+   ]
+  ]
+ },
+ {
+  "id": "Q03",
+  "category": "direct_factual",
+  "question": "What is the emergency helpline number to report fraud?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_6.pdf"
+    ],
+    "evidence": [
+     "1800-FIN-BASE"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "1800-346-2273",
+    "1800 346 2273",
+    "1800-fin-base"
+   ]
+  ]
+ },
+ {
+  "id": "Q04",
+  "category": "direct_factual",
+  "question": "What is the minimum credit score needed for a FinBase personal loan?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_5.pdf"
+    ],
+    "evidence": [
+     "not less than 720"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "720"
+   ]
+  ]
+ },
+ {
+  "id": "Q05",
+  "category": "numerical",
+  "question": "What interest rate does a senior citizen get on a 1-year fixed deposit?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_1.pdf"
+    ],
+    "evidence": [
+     "8.00% p.a."
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "8.00",
+    "8%"
+   ]
+  ]
+ },
+ {
+  "id": "Q06",
+  "category": "numerical",
+  "question": "My UPI refund was delayed by 4 days beyond the allowed time. How much compensation should I receive?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_2.pdf"
+    ],
+    "evidence": [
+     "₹100 per calendar day"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "400"
+   ]
+  ],
+  "notes": "needs arithmetic: 4 x ₹100",
+  "allowed_numbers": [
+   "400"
+  ]
+ },
+ {
+  "id": "Q07",
+  "category": "numerical",
+  "question": "My credit card outstanding is ₹10,000. What is the minimum amount due?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_3.pdf"
+    ],
+    "evidence": [
+     "5% of the total outstanding balance"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "500"
+   ]
+  ],
+  "notes": "5% of 10,000 = 500, which is higher than the ₹250 floor",
+  "allowed_numbers": [
+   "500"
+  ]
+ },
+ {
+  "id": "Q08",
+  "category": "numerical",
+  "question": "What is the late payment fee if my credit card balance is ₹7,000?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_3.pdf"
+    ],
+    "evidence": [
+     "Late Payment Fee (₹5,001 - ₹10,000) | ₹750 + GST"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "750"
+   ]
+  ],
+  "notes": "table lookup in a fee band"
+ },
+ {
+  "id": "Q09",
+  "category": "numerical",
+  "question": "How much interest rate do I earn on a savings account balance of ₹5,00,000?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_4.pdf"
+    ],
+    "evidence": [
+     "6.00% p.a."
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "3.50"
+   ],
+   [
+    "6.00"
+   ]
+  ],
+  "notes": "slab calculation: first ₹1L at 3.50%, remaining ₹4L at 6.00%"
+ },
+ {
+  "id": "Q10",
+  "category": "numerical",
+  "question": "I want a personal loan of ₹12,00,000. Which loan slab applies and what tenures are allowed?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_5.pdf"
+    ],
+    "evidence": [
+     "PL-EXECUTIVE"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "executive"
+   ],
+   [
+    "36"
+   ],
+   [
+    "48"
+   ],
+   [
+    "60"
+   ]
+  ],
+  "notes": "range lookup in a table"
+ },
+ {
+  "id": "Q11",
+  "category": "numerical",
+  "question": "If I report a third-party fraud on day 5, what is my maximum liability?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_6.pdf"
+    ],
+    "evidence": [
+     "capped at ₹5,000"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "5000"
+   ]
+  ],
+  "notes": "4 to 7 days band"
+ },
+ {
+  "id": "Q12",
+  "category": "policy",
+  "question": "What penalty is charged if I break my fixed deposit before maturity?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_1.pdf"
+    ],
+    "evidence": [
+     "penalty of 1.00%"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "1.00%",
+    "1%"
+   ]
+  ]
+ },
+ {
+  "id": "Q13",
+  "category": "policy",
+  "question": "Do I earn any interest if I close my fixed deposit within 7 days?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_1.pdf"
+    ],
+    "evidence": [
+     "zero interest"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "zero interest",
+    "no interest"
+   ]
+  ]
+ },
+ {
+  "id": "Q14",
+  "category": "policy",
+  "question": "What is the foreclosure charge if I close my personal loan after 18 months?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_5.pdf"
+    ],
+    "evidence": [
+     "3% of the outstanding principal"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "3%"
+   ]
+  ],
+  "notes": "the FAQ cites Section 4.2 but the body text is in Section 6.2"
+ },
+ {
+  "id": "Q15",
+  "category": "policy",
+  "question": "Can I foreclose my personal loan within 3 months of getting it?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_5.pdf"
+    ],
+    "evidence": [
+     "not permitted within the initial 6 months"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "6 months"
+   ],
+   [
+    "not",
+    "cannot",
+    "can't"
+   ]
+  ]
+ },
+ {
+  "id": "Q16",
+  "category": "policy",
+  "question": "My UPI transaction failed but the money was deducted. When will I get it back?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_2.pdf"
+    ],
+    "evidence": [
+     "T+2 business days"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "t+2"
+   ]
+  ]
+ },
+ {
+  "id": "Q17",
+  "category": "policy",
+  "question": "How long do I have to dispute an unauthorized merchant debit in the app?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_2.pdf"
+    ],
+    "evidence": [
+     "within 3 calendar days"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "3 calendar days",
+    "3 days"
+   ]
+  ]
+ },
+ {
+  "id": "Q18",
+  "category": "policy",
+  "question": "What is the UPI payment limit in the first 24 hours after I reset my UPI PIN?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_2.pdf"
+    ],
+    "evidence": [
+     "₹5,000 for the initial 24 hours"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "5000"
+   ]
+  ]
+ },
+ {
+  "id": "Q19",
+  "category": "policy",
+  "question": "Does FinBase offer Bitcoin or cryptocurrency trading?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_1.pdf"
+    ],
+    "evidence": [
+     "cryptocurrency"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "not offer",
+    "not provide",
+    "does not",
+    "doesn't",
+    "no,",
+    "no."
+   ]
+  ],
+  "notes": "the knowledge base explicitly says this service is not offered"
+ },
+ {
+  "id": "Q20",
+  "category": "multi_document",
+  "question": "Is PAN mandatory for a fixed deposit above ₹50,000?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_6.pdf"
+    ],
+    "evidence": [
+     "deposits exceeding ₹50,000"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "pan"
+   ],
+   [
+    "50000"
+   ]
+  ],
+  "notes": "the answer sits in the KYC document, not in the FD document"
+ },
+ {
+  "id": "Q21",
+  "category": "multi_document",
+  "question": "What KYC level do I need for a personal loan, and what minimum credit score is required?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_6.pdf"
+    ],
+    "evidence": [
+     "unlocks personal loans"
+    ]
+   },
+   {
+    "docs": [
+     "sample_5.pdf"
+    ],
+    "evidence": [
+     "not less than 720"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "full kyc",
+    "video kyc"
+   ],
+   [
+    "720"
+   ]
+  ],
+  "notes": "needs two documents"
+ },
+ {
+  "id": "Q22",
+  "category": "multi_document",
+  "question": "How does the foreign currency markup on the FinBase Neo credit card compare with the international POS forex fee on the savings account debit card?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_3.pdf"
+    ],
+    "evidence": [
+     "Foreign Currency Markup Fee | 3.50% + GST"
+    ]
+   },
+   {
+    "docs": [
+     "sample_4.pdf"
+    ],
+    "evidence": [
+     "1.5% Forex Fee"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "3.50",
+    "3.5%"
+   ],
+   [
+    "1.5"
+   ]
+  ],
+  "notes": "needs two documents"
+ },
+ {
+  "id": "Q23",
+  "category": "confusing",
+  "question": "What compensation do I get if a failed P2M merchant online payment is refunded late?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_2.pdf"
+    ],
+    "evidence": [
+     "P2M Merchant Online Debit Failed"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "t+5"
+   ]
+  ],
+  "notes": "Section 2 says compensation starts after T+2 but the Section 21 matrix says beyond T+5 for P2M; a good answer shows the matrix"
+ },
+ {
+  "id": "Q24",
+  "category": "confusing",
+  "question": "How many free ATM withdrawals do I get at partner ATMs and what do I pay after that?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_4.pdf"
+    ],
+    "evidence": [
+     "5 free cash withdrawals per calendar month"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "5 free",
+    "5 per",
+    "5 cash",
+    "5 withdrawals",
+    "five"
+   ],
+   [
+    "21"
+   ]
+  ],
+  "notes": "free quota differs for non-partner ATMs"
+ },
+ {
+  "id": "Q25",
+  "category": "not_in_kb",
+  "question": "What is the interest rate on a FinBase home loan?",
+  "answerable": false,
+  "gold": [],
+  "answer_keywords": [],
+  "notes": "home loans are not covered"
+ },
+ {
+  "id": "Q26",
+  "category": "not_in_kb",
+  "question": "How much is one credit card reward point worth when redeemed?",
+  "answerable": false,
+  "gold": [],
+  "answer_keywords": [],
+  "notes": "the table of contents lists a reward points matrix but the section is missing from the PDF"
+ },
+ {
+  "id": "Q27",
+  "category": "not_in_kb",
+  "question": "What is the interest rate for a 10-year fixed deposit?",
+  "answerable": false,
+  "gold": [],
+  "answer_keywords": [],
+  "notes": "the rate table stops at 5 years"
+ },
+ {
+  "id": "Q28",
+  "category": "not_in_kb",
+  "question": "What is the capital of France?",
+  "answerable": false,
+  "gold": [],
+  "answer_keywords": [],
+  "notes": "completely off-topic"
+ },
+ {
+  "id": "Q29",
+  "category": "follow_up",
+  "question": "And what about the Metal card?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_3.pdf"
+    ],
+    "evidence": [
+     "₹4,999 + 18% GST"
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "4,999",
+    "4999"
+   ]
+  ],
+  "history": [
+   {
+    "role": "user",
+    "content": "What is the annual fee of the FinBase Luxe credit card?"
+   },
+   {
+    "role": "assistant",
+    "content": "The FinBase Luxe credit card has an annual fee of ₹999 + 18% GST."
+   }
+  ],
+  "standalone": "What is the annual fee of the FinBase Metal credit card?"
+ },
+ {
+  "id": "Q30",
+  "category": "follow_up",
+  "question": "What about for senior citizens?",
+  "answerable": true,
+  "gold": [
+   {
+    "docs": [
+     "sample_1.pdf"
+    ],
+    "evidence": [
+     "8.00% p.a."
+    ]
+   }
+  ],
+  "answer_keywords": [
+   [
+    "8.00",
+    "8%"
+   ]
+  ],
+  "history": [
+   {
+    "role": "user",
+    "content": "What is the interest rate on a 1-year fixed deposit for regular customers?"
+   },
+   {
+    "role": "assistant",
+    "content": "A regular customer gets 7.50% p.a. on a deposit of 1 year to less than 2 years."
+   }
+  ],
+  "standalone": "What is the interest rate for senior citizens on a 1-year fixed deposit?"
+ }
+]
